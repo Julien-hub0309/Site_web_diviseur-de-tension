@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur - Ponts Diviseur de Tension</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Module/styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Simulateur pont diviseur de tension</h1>
+        </div>
+        <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Rechercher un mot-clé...">
+                <button onclick="searchKeyword()">Rechercher</button>
+            </div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Ouvrir le menu de navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-list">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="Introduction.html">Introduction</a></li>
+                    <li><a href="Convertisseur.html">Le Convertisseur</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="intro-section">
+            <h1 class="page-title">Terminal de Simulation Électrique</h1>
+            <p class="intro-text">
+                Entrez les valeurs de votre circuit pour calculer la tension de sortie ($V_{out}$) ou trouver les résistances nécessaires pour votre cible.
+            </p>
+            <p class="site-slogan">Un convertisseur sert à transformer une forme d’énergie ou de signal électrique en une autre.
+            Il permet par exemple de modifier une tension, ou de passer d’un signal analogique à un signal numérique.</p>
+            <p>On trouve différents types de convertisseurs : AC/DC, DC/DC, CAN (analogique-numérique) ou CNA (numérique-analogique).
+            Ils sont très utilisés dans les systèmes électroniques pour adapter, traiter ou alimenter les circuits.</p>
+
+            <div class="converter-box card">
+    <h3>Calculateur de Pont Diviseur</h3>
+    
+    <div class="input-group">
+        <label for="vin">Tension d'Entrée (Volts) :</label>
+        <input type="number" id="vin" placeholder="Ex: 12" class="data-input">
+        </div>
+    
+    <div class="input-group">
+        <label for="r1">Résistance 1 (Ohms) :</label>
+        <input type="number" id="r1" placeholder="Ex: 1000" class="data-input">
+        </div>
+
+    <div class="input-group">
+        <label for="r2">Résistance 2 (Ohms) :</label>
+        <input type="number" id="r2" placeholder="Ex: 500" class="data-input">
+        </div>
+    
+    <button id="calculate-btn" class="button primary-button">Calculer</button>
+    <div class="result-display data-good">
+        Résultat: <span id="vout-result"></span>
+        </div>
+</div>
+
+            <p class="data-warning">Attention : Des valeurs de résistance trop faibles peuvent entraîner une consommation excessive et une surchauffe.</p>
+
+        </section>
+        
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2025 Projet Pont diviseur de tension. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../Module/script.js"></script>
+    </body>
+</html>
